@@ -1,0 +1,154 @@
+@import "fuentes";
+@import "fondos";
+@import "colores";
+
+.header, .footer {
+	background-image: $background-nav;
+}
+
+.nav-tabs {
+	margin: 15px 50px;
+	font-family: $font-nav;
+	.nav-item {
+		padding: 0px 3px;
+		.nav-link {
+			color: $amarillo-oscuro;
+			&:hover {
+				color: $blanco;
+			}
+		}
+		.active {
+			color: $gris-oscuro;
+		}
+	}
+}
+
+.nombreBar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	h2 {
+		font-family: $font-nav;
+		color: $gris-clarito;
+	}
+}
+
+.carousel {
+	.carousel-indicators {
+		.indicador {
+			width: 100px;
+			height: 5px;
+			background-color: $blanco;
+		}
+	}
+	.carousel-control-prev {
+		.carousel-control-prev-icon {
+			width: 4rem;
+    		height: 80px;
+    	}
+	}
+	.carousel-control-next {
+		.carousel-control-next-icon {
+			width: 4rem;
+			height: 80px;
+		}
+	}
+}
+
+.ubicacion {
+	background-image: $background-negro;
+	.row {
+		justify-content: center;
+		div {
+			.card-ubicacion {
+				align-items: center;
+				background: transparent;
+				h3 {
+					font-family: $font-nav;
+					color:$blanco;
+				}
+			}
+		}
+	}
+}
+
+.mediospago {
+	background-image: $background-negro;
+	.row {
+		justify-content: center;
+		div {
+			.card-pago {
+				background: transparent;
+				.card-body {
+					align-items: center;
+					display: flex;
+					flex-direction: column;
+					h3 {
+						font-family: $font-nav;
+						color: $blanco;
+					}
+				}
+			}
+		}
+	}
+}
+
+.redes {
+	background-image: $background-negro;
+	.row {
+		div {
+			ul {
+				.list-group-item {
+					background: transparent;
+					color: $blanco;
+					&:hover {
+						font-weight: bold;
+						font-size: 20px;
+					}
+					a {
+						p {
+							flex-wrap: wrap;
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.newsletter {
+	background-image: $background-negro;
+	.row {
+		justify-content: center;
+		div {
+			.newsletter-items {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				.form-label {
+					color: $blanco;
+				}
+			}
+		}
+	}
+}
+
+.footer-nav {
+	margin: 15px 50px;
+	font-family: $font-nav;
+	.nav-item {
+		padding: 0px 3px;
+		.nav-link {
+			color: $amarillo-oscuro;
+			&:hover {
+				color: $blanco;
+			}
+		}
+		.active {
+			color: $gris-oscuro;
+			background-color: $blanco;
+		}
+	}
+}
