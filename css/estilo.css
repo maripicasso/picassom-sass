@@ -1,3 +1,12 @@
+.boton-generico, .newsletter .row div .newsletter-items button {
+  border-radius: 7px;
+  background-color: white;
+  width: 50%;
+  height: 40px;
+  color: black;
+  font-family: "Cinzel", sans-serif;
+}
+
 .header, .footer {
   background-image: url(../assets/img/fondo1.png);
 }
@@ -7,7 +16,10 @@
   font-family: "Cinzel", sans-serif;
 }
 .nav-tabs .nav-item {
-  padding: 0px 3px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 3px;
+  padding-left: 3px;
 }
 .nav-tabs .nav-item .nav-link {
   color: #F9DC05;
@@ -21,6 +33,7 @@
 
 .nombreBar {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -55,7 +68,7 @@
 }
 .ubicacion .row div .card-ubicacion h3 {
   font-family: "Cinzel", sans-serif;
-  color: #FFFFFF;
+  color: #DDEEEE;
 }
 
 .mediospago {
@@ -68,13 +81,14 @@
   background: transparent;
 }
 .mediospago .row div .card-pago .card-body {
-  align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .mediospago .row div .card-pago .card-body h3 {
   font-family: "Cinzel", sans-serif;
-  color: #FFFFFF;
+  color: #DDEEEE;
 }
 
 .redes {
@@ -102,10 +116,19 @@
 .newsletter .row div .newsletter-items {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .newsletter .row div .newsletter-items .form-label {
   color: #FFFFFF;
+}
+.newsletter .row div .newsletter-items button {
+  background-color: #D49E95;
+  border: none;
+  color: #340E37;
+}
+.newsletter .row div .newsletter-items button:hover {
+  background-color: #DDEEEE;
 }
 
 .footer-nav {
@@ -113,7 +136,10 @@
   font-family: "Cinzel", sans-serif;
 }
 .footer-nav .nav-item {
-  padding: 0px 3px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 3px;
+  padding-left: 3px;
 }
 .footer-nav .nav-item .nav-link {
   color: #F9DC05;

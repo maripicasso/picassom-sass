@@ -2,6 +2,42 @@
 @import "fondos";
 @import "colores";
 
+$subtitulos: (
+	color: $gris-clarito,
+	tamaño-fuente: 30px,
+	alineacion: center,
+	tipo-fuente: $font-nav
+	);
+
+@mixin flex-column-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+}
+
+@mixin fondo-transparente {
+	background: transparent;
+}
+
+@mixin padding ($p-arriba, $p-abajo, $p-derecha, $p-izquierda) {
+	padding-top: $p-arriba;
+	padding-bottom: $p-abajo;
+	padding-right: $p-derecha;
+	padding-left: $p-izquierda;
+}
+
+.boton-generico {
+	border-radius: 7px;
+	background-color: white;
+	width: 50%;
+	height: 40px;
+	color: black;
+	font-family: $font-nav;
+}
+
+
+
 .header, .footer {
 	background-image: $background-nav;
 }
@@ -10,7 +46,7 @@
 	margin: 15px 50px;
 	font-family: $font-nav;
 	.nav-item {
-		padding: 0px 3px;
+		@include padding(0px, 0px, 3px, 3px);
 		.nav-link {
 			color: $amarillo-oscuro;
 			&:hover {
@@ -24,13 +60,11 @@
 }
 
 .nombreBar {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include flex-column-center;
 
 	h2 {
-		font-family: $font-nav;
-		color: $gris-clarito;
+		font-family: map-get($subtitulos, tipo-fuente);
+		color: map-get($subtitulos, color);
 	}
 }
 
@@ -63,10 +97,10 @@
 		div {
 			.card-ubicacion {
 				align-items: center;
-				background: transparent;
+				@include fondo-transparente;
 				h3 {
-					font-family: $font-nav;
-					color:$blanco;
+					font-family: map-get($subtitulos, tipo-fuente);
+					color:map-get($subtitulos, color);
 				}
 			}
 		}
@@ -79,14 +113,12 @@
 		justify-content: center;
 		div {
 			.card-pago {
-				background: transparent;
+				@include fondo-transparente;
 				.card-body {
-					align-items: center;
-					display: flex;
-					flex-direction: column;
+					@include flex-column-center;
 					h3 {
-						font-family: $font-nav;
-						color: $blanco;
+						font-family: map-get($subtitulos, tipo-fuente);
+						color: map-get($subtitulos, color);
 					}
 				}
 			}
@@ -100,7 +132,7 @@
 		div {
 			ul {
 				.list-group-item {
-					background: transparent;
+					@include fondo-transparente;
 					color: $blanco;
 					&:hover {
 						font-weight: bold;
@@ -124,11 +156,18 @@
 		justify-content: center;
 		div {
 			.newsletter-items {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
+				@include flex-column-center;
 				.form-label {
 					color: $blanco;
+				}
+				button {
+					@extend .boton-generico;
+					background-color: $rosa-claro;
+					border: none;
+					color: $purpura;
+					&:hover {
+						background-color: $gris-clarito;
+					}
 				}
 			}
 		}
@@ -139,7 +178,7 @@
 	margin: 15px 50px;
 	font-family: $font-nav;
 	.nav-item {
-		padding: 0px 3px;
+		@include padding(0px, 0px, 3px, 3px);
 		.nav-link {
 			color: $amarillo-oscuro;
 			&:hover {
